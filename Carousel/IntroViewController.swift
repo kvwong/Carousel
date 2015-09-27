@@ -21,6 +21,15 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var introScroll: UIScrollView!
 
+    
+    var xOffsets : [Float] = [-30, 75, -66, 10, -200, -15]
+    var yOffsets : [Float] = [-285, -240, -415, -408, -480, -500]
+    var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
+    var rotations : [Float] = [-10, -10, 10, 10, 10, -10]
+    
+    func convertValue(value: Float, r1Min: Float, r1Max: Float, r2Min: Float, r2Max: Float) -> Float { let ratio = (r2Max - r2Min) / (r1Max - r1Min); return value * ratio + r2Min - r1Min * ratio
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,8 +66,13 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         photo_lochness.frame.size.width = 76
         photo_lochness.frame.size.height = 76
         
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the views
+        
+        introScroll.delegate = self
+        introScroll.sendSubviewToBack(introView)
+    
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -67,6 +81,72 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // This method is called as the user scrolls
+        
+        let offset = Float(introScroll.contentOffset.y)
+        
+        let tx0 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: xOffsets[0], r2Max: 0)
+        let ty0 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: yOffsets[0], r2Max: 0)
+        let scale0 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[0], r2Max: 1)
+        let rotation0 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[0], r2Max: 0)
+        
+        let tx1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: xOffsets[1], r2Max: 0)
+        let ty1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: yOffsets[1], r2Max: 0)
+        let scale1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[1], r2Max: 1)
+        let rotation1 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[1], r2Max: 0)
+        
+        let tx2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: xOffsets[2], r2Max: 0)
+        let ty2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: yOffsets[2], r2Max: 0)
+        let scale2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[2], r2Max: 1)
+        let rotation2 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[2], r2Max: 0)
+        
+        let tx3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: xOffsets[3], r2Max: 0)
+        let ty3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: yOffsets[3], r2Max: 0)
+        let scale3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[3], r2Max: 1)
+        let rotation3 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[0], r2Max: 0)
+        
+        let tx4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: xOffsets[4], r2Max: 0)
+        let ty4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: yOffsets[4], r2Max: 0)
+        let scale4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[4], r2Max: 1)
+        let rotation4 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[4], r2Max: 0)
+        
+        let tx5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: xOffsets[5], r2Max: 0)
+        let ty5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: yOffsets[5], r2Max: 0)
+        let scale5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[5], r2Max: 1)
+        let rotation5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[5], r2Max: 0)
+        
+        
+        
+        // Moves, scales and rotates photo with bunny ears
+        photo_bunnyears.transform = CGAffineTransformMakeTranslation(CGFloat(tx0), CGFloat(ty0))
+        photo_bunnyears.transform = CGAffineTransformScale(photo_bunnyears.transform, CGFloat(scale0), CGFloat(scale0))
+        photo_bunnyears.transform = CGAffineTransformRotate(photo_bunnyears.transform, CGFloat(Double(rotation0) * M_PI / 180))
+        
+        // Moves, scales and rotates photo with deer
+        photo_deer.transform = CGAffineTransformMakeTranslation(CGFloat(tx1), CGFloat(ty1))
+        photo_deer.transform = CGAffineTransformScale(photo_deer.transform, CGFloat(scale1), CGFloat(scale1))
+        photo_deer.transform = CGAffineTransformRotate(photo_deer.transform, CGFloat(Double(rotation1) * M_PI / 180))
+        
+        // Moves, scales and rotates photo with fishing
+        photo_fishing.transform = CGAffineTransformMakeTranslation(CGFloat(tx2), CGFloat(ty2))
+        photo_fishing.transform = CGAffineTransformScale(photo_fishing.transform, CGFloat(scale2), CGFloat(scale2))
+        photo_fishing.transform = CGAffineTransformRotate(photo_fishing.transform, CGFloat(Double(rotation2) * M_PI / 180))
+        
+        // Moves, scales and rotates photo with lochness
+        photo_lochness.transform = CGAffineTransformMakeTranslation(CGFloat(tx3), CGFloat(ty3))
+        photo_lochness.transform = CGAffineTransformScale(photo_lochness.transform, CGFloat(scale3), CGFloat(scale3))
+        photo_lochness.transform = CGAffineTransformRotate(photo_lochness.transform, CGFloat(Double(rotation3) * M_PI / 180))
+        
+        // Moves, scales and rotates photo with cabin
+        photo_cabin.transform = CGAffineTransformMakeTranslation(CGFloat(tx4), CGFloat(ty4))
+        photo_cabin.transform = CGAffineTransformScale(photo_cabin.transform, CGFloat(scale4), CGFloat(scale4))
+        photo_cabin.transform = CGAffineTransformRotate(photo_cabin.transform, CGFloat(Double(rotation4) * M_PI / 180))
+        
+        // Moves, scales and rotates photo with dog
+        photo_dog.transform = CGAffineTransformMakeTranslation(CGFloat(tx5), CGFloat(ty5))
+        photo_dog.transform = CGAffineTransformScale(photo_dog.transform, CGFloat(scale5), CGFloat(scale5))
+        photo_dog.transform = CGAffineTransformRotate(photo_dog.transform, CGFloat(Double(rotation5) * M_PI / 180))
+
+        
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
@@ -83,9 +163,11 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     }
 
     @IBAction func createAccount(sender: AnyObject) {
+    
     }
 
     @IBAction func signIn(sender: AnyObject) {
+    
     }
 
     /*

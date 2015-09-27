@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB4EF3531BB7CC9B0041B966 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF3521BB7CC9B0041B966 /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB4EF3551BB7CCA40041B966 /* ForgotPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF3541BB7CCA40041B966 /* ForgotPWViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB4EF3571BB7CCB00041B966 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF3561BB7CCB00041B966 /* CreateViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CB4EF3591BB7CCB90041B966 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF3581BB7CCB90041B966 /* WalkthroughViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CB99AA271BB5315F00002C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99AA261BB5315F00002C71 /* AppDelegate.swift */; };
 		CB99AA291BB5315F00002C71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99AA281BB5315F00002C71 /* ViewController.swift */; };
 		CB99AA2C1BB5315F00002C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB99AA2A1BB5315F00002C71 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB4EF3521BB7CC9B0041B966 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CB4EF3541BB7CCA40041B966 /* ForgotPWViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPWViewController.swift; sourceTree = "<group>"; };
+		CB4EF3561BB7CCB00041B966 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		CB4EF3581BB7CCB90041B966 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		CB99AA231BB5315F00002C71 /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB99AA261BB5315F00002C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB99AA281BB5315F00002C71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +89,10 @@
 		CB99AA1A1BB5315F00002C71 = {
 			isa = PBXGroup;
 			children = (
+				CB4EF3521BB7CC9B0041B966 /* SignInViewController.swift */,
+				CB4EF3541BB7CCA40041B966 /* ForgotPWViewController.swift */,
+				CB4EF3561BB7CCB00041B966 /* CreateViewController.swift */,
+				CB4EF3581BB7CCB90041B966 /* WalkthroughViewController.swift */,
 				CB99AA251BB5315F00002C71 /* Carousel */,
 				CB99AA3A1BB5315F00002C71 /* CarouselTests */,
 				CB99AA451BB5315F00002C71 /* CarouselUITests */,
@@ -265,8 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB99AA291BB5315F00002C71 /* ViewController.swift in Sources */,
+				CB4EF3591BB7CCB90041B966 /* WalkthroughViewController.swift in Sources */,
 				CB99AA551BB5333700002C71 /* Common.swift in Sources */,
+				CB4EF3571BB7CCB00041B966 /* CreateViewController.swift in Sources */,
 				CB99AA271BB5315F00002C71 /* AppDelegate.swift in Sources */,
+				CB4EF3531BB7CC9B0041B966 /* SignInViewController.swift in Sources */,
+				CB4EF3551BB7CCA40041B966 /* ForgotPWViewController.swift in Sources */,
 				CB99AA571BB533A000002C71 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +510,7 @@
 				CB99AA4D1BB5315F00002C71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB99AA4E1BB5315F00002C71 /* Build configuration list for PBXNativeTarget "CarouselTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +519,7 @@
 				CB99AA501BB5315F00002C71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB99AA511BB5315F00002C71 /* Build configuration list for PBXNativeTarget "CarouselUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +528,7 @@
 				CB99AA531BB5315F00002C71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
