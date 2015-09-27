@@ -67,8 +67,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         photo_lochness.frame.size.height = 76
         
         // Do any additional setup after loading the views
-        
-        introScroll.delegate = self
+    
         introScroll.sendSubviewToBack(introView)
     
     }
@@ -114,8 +113,6 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         let scale5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[5], r2Max: 1)
         let rotation5 = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[5], r2Max: 0)
         
-        
-        
         // Moves, scales and rotates photo with bunny ears
         photo_bunnyears.transform = CGAffineTransformMakeTranslation(CGFloat(tx0), CGFloat(ty0))
         photo_bunnyears.transform = CGAffineTransformScale(photo_bunnyears.transform, CGFloat(scale0), CGFloat(scale0))
@@ -145,7 +142,6 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         photo_dog.transform = CGAffineTransformMakeTranslation(CGFloat(tx5), CGFloat(ty5))
         photo_dog.transform = CGAffineTransformScale(photo_dog.transform, CGFloat(scale5), CGFloat(scale5))
         photo_dog.transform = CGAffineTransformRotate(photo_dog.transform, CGFloat(Double(rotation5) * M_PI / 180))
-
         
     }
     
