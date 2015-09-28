@@ -139,8 +139,6 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
                 successAlert.dismissWithClickedButtonIndex(-1, animated: true)
                 self.performSegueWithIdentifier("startWelcome", sender: self)
             }
-            
-        
         } else {
             let passwordAlert = UIAlertView(title: "Incorrect Password", message: "Please try again", delegate: nil, cancelButtonTitle: "Okay")
             
