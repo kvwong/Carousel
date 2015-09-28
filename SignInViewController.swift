@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var loginLines: UIImageView!
     @IBOutlet weak var signInText: UIImageView!
     @IBOutlet weak var emailText: UITextField!
@@ -27,7 +27,6 @@ class SignInViewController: UIViewController {
     var initialSignInImgY: CGFloat!
     let offsetText: CGFloat = -70
     let offsetCTA: CGFloat = -220
-    let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .Alert)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,38 +116,42 @@ class SignInViewController: UIViewController {
     
     @IBAction func emailDidEnd(sender: AnyObject) {
         if emailText.text == "" {
+            let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
             
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                // handle response here.
+            }
+            
+            alertController.addAction(OKAction)
+            presentViewController(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+        }
+    }
+    
+    func checkPassword() {
+        if passwordText.text == "password" {
+            let successAlert = UIAlertView(title: "Signing in...", message: "",delegate: nil, cancelButtonTitle: nil)
+            
+            successAlert.show()
+            
+            delay(2) {
+                successAlert.dismissWithClickedButtonIndex(-1, animated: true)
+                self.performSegueWithIdentifier("startWelcome", sender: self)
+            }
+            
+        
+        } else {
+            let passwordAlert = UIAlertView(title: "Incorrect Password", message: "Please try again", delegate: nil, cancelButtonTitle: "Okay")
+            
+            passwordAlert.show()
         }
     }
     
     @IBAction func signIn(sender: AnyObject) {
-        if emailText.text == "" {
-            print("no email")
-            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-                // handle cancel response here. Doing nothing will dismiss the view.
-            }
-            alertController.addAction(cancelAction)
-            // create an OK action
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                // handle response here.
-            }
-            // add the OK action to the alert controller
-            alertController.addAction(OKAction)
-        }
         
-        if passwordText.text == "" {
-            print("no password")
-        }
-        
-        if passwordText.text == "password" {
-            print("successful password")
-        } else {
-            print("WRONG")
-        }
-        
-        delay(2) {
-            self.performSegueWithIdentifier("startWelcome", sender: self)
-        }
+        self.checkPassword()
+
     }
     /*
     // MARK: - Navigation

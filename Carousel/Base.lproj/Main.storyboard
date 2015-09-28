@@ -40,7 +40,7 @@
                                         <animations/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="iUx-je-Vg0" userLabel="photo_cabin">
-                                        <rect key="frame" x="115" y="374" width="76" height="75"/>
+                                        <rect key="frame" x="244" y="485" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <animations/>
                                     </imageView>
@@ -50,17 +50,12 @@
                                         <animations/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="3dw-NN-xa4" userLabel="photo_fishing">
-                                        <rect key="frame" x="236" y="388" width="76" height="76"/>
+                                        <rect key="frame" x="262" y="417" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <animations/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="oYW-bi-iAT" userLabel="photo_lochness">
-                                        <rect key="frame" x="146" y="441" width="76" height="76"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="RtG-Ll-0pf" userLabel="photo_bunnyears">
-                                        <rect key="frame" x="8" y="417" width="153" height="152"/>
+                                        <rect key="frame" x="178" y="462" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <animations/>
                                     </imageView>
@@ -83,7 +78,12 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="5zo-Fo-Fu3" userLabel="photo_deer">
-                                        <rect key="frame" x="213" y="448" width="76" height="75"/>
+                                        <rect key="frame" x="169" y="494" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="RtG-Ll-0pf" userLabel="photo_bunnyears">
+                                        <rect key="frame" x="140" y="325" width="153" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <animations/>
                                     </imageView>
@@ -587,7 +587,6 @@
                                 <animations/>
                                 <connections>
                                     <action selector="signIn:" destination="Tco-vx-eSc" eventType="touchUpInside" id="p0F-Jo-E3j"/>
-                                    <segue destination="SkC-Yh-MwS" kind="modal" identifier="startWelcome" id="Zwh-OL-8Zn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ta0-qv-uaI">
@@ -615,6 +614,7 @@
                         <outlet property="passwordText" destination="yiU-M2-2we" id="Z2Z-A4-OMl"/>
                         <outlet property="signInButton" destination="KVB-HL-nL0" id="9PX-8y-wd5"/>
                         <outlet property="signInText" destination="0E1-r0-gaF" id="9hi-ie-C3N"/>
+                        <segue destination="SkC-Yh-MwS" kind="modal" identifier="startWelcome" modalTransitionStyle="crossDissolve" id="q76-5d-7mm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABT-Us-b3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -720,6 +720,6 @@
         <image name="welcome4" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6PQ-J8-HFr"/>
+        <segue reference="q76-5d-7mm"/>
     </inferredMetricsTieBreakers>
 </document>

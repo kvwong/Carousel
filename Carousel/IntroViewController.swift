@@ -22,10 +22,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var introScroll: UIScrollView!
 
     
-    var xOffsets : [Float] = [-30, 75, -66, 10, -200, -15]
-    var yOffsets : [Float] = [-285, -240, -415, -408, -480, -500]
+    var xOffsets : [Float] = [-66, 45, 10, -100, -110, 90]
+    var yOffsets : [Float] = [-285, -240, -408, -480, -500, -408]
     var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
-    var rotations : [Float] = [-10, -10, 10, 10, 10, -10]
+    var rotations : [Float] = [-10, -10, 10, 10, 10, 10]
     
     func convertValue(value: Float, r1Min: Float, r1Max: Float, r2Min: Float, r2Max: Float) -> Float { let ratio = (r2Max - r2Min) / (r1Max - r1Min); return value * ratio + r2Min - r1Min * ratio
     }
@@ -129,9 +129,9 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         photo_fishing.transform = CGAffineTransformRotate(photo_fishing.transform, CGFloat(Double(rotation2) * M_PI / 180))
         
         // Moves, scales and rotates photo with lochness
-        photo_lochness.transform = CGAffineTransformMakeTranslation(CGFloat(tx3), CGFloat(ty3))
-        photo_lochness.transform = CGAffineTransformScale(photo_lochness.transform, CGFloat(scale3), CGFloat(scale3))
-        photo_lochness.transform = CGAffineTransformRotate(photo_lochness.transform, CGFloat(Double(rotation3) * M_PI / 180))
+        photo_dog.transform = CGAffineTransformMakeTranslation(CGFloat(tx3), CGFloat(ty3))
+        photo_dog.transform = CGAffineTransformScale(photo_dog.transform, CGFloat(scale3), CGFloat(scale3))
+        photo_dog.transform = CGAffineTransformRotate(photo_dog.transform, CGFloat(Double(rotation3) * M_PI / 180))
         
         // Moves, scales and rotates photo with cabin
         photo_cabin.transform = CGAffineTransformMakeTranslation(CGFloat(tx4), CGFloat(ty4))
@@ -139,9 +139,9 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         photo_cabin.transform = CGAffineTransformRotate(photo_cabin.transform, CGFloat(Double(rotation4) * M_PI / 180))
         
         // Moves, scales and rotates photo with dog
-        photo_dog.transform = CGAffineTransformMakeTranslation(CGFloat(tx5), CGFloat(ty5))
-        photo_dog.transform = CGAffineTransformScale(photo_dog.transform, CGFloat(scale5), CGFloat(scale5))
-        photo_dog.transform = CGAffineTransformRotate(photo_dog.transform, CGFloat(Double(rotation5) * M_PI / 180))
+        photo_lochness.transform = CGAffineTransformMakeTranslation(CGFloat(tx5), CGFloat(ty5))
+        photo_lochness.transform = CGAffineTransformScale(photo_lochness.transform, CGFloat(scale5), CGFloat(scale5))
+        photo_lochness.transform = CGAffineTransformRotate(photo_lochness.transform, CGFloat(Double(rotation5) * M_PI / 180))
         
     }
     
