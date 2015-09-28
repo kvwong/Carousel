@@ -115,6 +115,12 @@ class SignInViewController: UIViewController {
         passwordText.endEditing(true)
     }
     
+    @IBAction func emailDidEnd(sender: AnyObject) {
+        if emailText.text == "" {
+            
+        }
+    }
+    
     @IBAction func signIn(sender: AnyObject) {
         if emailText.text == "" {
             print("no email")

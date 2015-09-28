@@ -34,8 +34,8 @@ class CreateViewController: UIViewController {
     var initialCreateButtonY: CGFloat!
     var initialCreateImageY: CGFloat!
     var initialTermsImageY: CGFloat!
-    let offsetText: CGFloat = -110
-    let offsetCTA: CGFloat = -140
+    let offsetText: CGFloat = -115
+    let offsetCTA: CGFloat = -180
 
     
     override func viewDidLoad() {
@@ -132,6 +132,9 @@ class CreateViewController: UIViewController {
     
     @IBAction func backNav(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
+    }
+    @IBAction func create(sender: AnyObject) {
+        print("create dropbox")
     }
 
     @IBAction func onTap(sender: AnyObject) {

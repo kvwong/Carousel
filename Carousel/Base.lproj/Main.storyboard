@@ -8,6 +8,7 @@
         <scene sceneID="HKk-gb-Bxq">
             <objects>
                 <navigationController navigationBarHidden="YES" id="9Jf-xM-XuW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BR7-ub-HWm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jNT-1r-JMv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -169,8 +170,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <connections>
-                                            <action selector="close:" destination="td3-E4-gZX" eventType="touchUpInside" id="aWB-vQ-QEt"/>
-                                            <action selector="signOutButton:" destination="td3-E4-gZX" eventType="touchUpInside" id="0Zf-XS-zEm"/>
+                                            <segue destination="9Jf-xM-XuW" kind="modal" modalTransitionStyle="crossDissolve" id="5iq-rh-a8B"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -201,7 +201,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84H-dq-hbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="3072"/>
+            <point key="canvasLocation" x="1825" y="3064"/>
+        </scene>
+        <!--Terms of Service-->
+        <scene sceneID="ekm-RO-TPT">
+            <objects>
+                <viewController title="Terms of Service" automaticallyAdjustsScrollViewInsets="NO" id="iU8-jV-MPq" customClass="WebViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWc-Br-btz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="aWQ-EJ-UYI">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Close browser" id="8jS-vy-3LG">
+                                        <connections>
+                                            <action selector="dismiss:" destination="iU8-jV-MPq" id="5QS-SE-Pfn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="X6J-WR-Kbp">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="X6J-WR-Kbp" id="Mse-qL-hUv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MG9-Pz-75N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="1651"/>
         </scene>
         <!--Create View Controller-->
         <scene sceneID="wSL-ey-ftd">
@@ -231,42 +269,34 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" id="ESe-Wg-KF3">
                                 <rect key="frame" x="20" y="220" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="yPe-T8-Skr">
                                 <rect key="frame" x="20" y="263" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="gbr-oW-3jP">
                                 <rect key="frame" x="20" y="310" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                             </textField>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_button" id="cMJ-ZI-Byl">
-                                <rect key="frame" x="0.0" y="428" width="320" height="57"/>
+                                <rect key="frame" x="0.0" y="454" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVl-dx-Vbx">
-                                <rect key="frame" x="20" y="429" width="280" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <connections>
-                                    <segue destination="SkC-Yh-MwS" kind="modal" id="6PQ-J8-HFr"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bDw-Pc-vjf">
                                 <rect key="frame" x="17" y="349" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -281,6 +311,9 @@
                                 <rect key="frame" x="47" y="351" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
+                                <connections>
+                                    <segue destination="iU8-jV-MPq" kind="modal" id="A3l-20-zeb"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_nav" id="bHG-Mt-83K">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
@@ -294,6 +327,15 @@
                                 <connections>
                                     <action selector="backNav:" destination="Tco-vx-eSc" eventType="touchUpInside" id="LaN-Dy-Nsa"/>
                                     <action selector="backNav:" destination="U57-LP-LRd" eventType="touchUpInside" id="qGA-Ij-cai"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVl-dx-Vbx">
+                                <rect key="frame" x="20" y="457" width="280" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="create:" destination="U57-LP-LRd" eventType="touchUpInside" id="fka-cl-cxR"/>
+                                    <segue destination="SkC-Yh-MwS" kind="modal" id="6PQ-J8-HFr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -510,6 +552,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailDidEnd:" destination="Tco-vx-eSc" eventType="editingDidEnd" id="gjT-aN-cnZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="yiU-M2-2we">
                                 <rect key="frame" x="20" y="196" width="280" height="30"/>

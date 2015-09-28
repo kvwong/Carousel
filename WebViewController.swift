@@ -1,21 +1,25 @@
 //
-//  SettingsViewController.swift
+//  WebViewController.swift
 //  Carousel
 //
-//  Created by Kevin Wong on 9/27/15.
+//  Created by Kevin Wong on 9/28/15.
 //  Copyright © 2015 Kevin Wong. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class WebViewController: UIViewController {
 
-    @IBOutlet weak var settingsImage: UIImageView!
-    @IBOutlet weak var settingsScroll: UIScrollView!
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        settingsScroll.contentSize = settingsImage.image!.size
+        let url = NSURL(string: "https://www.dropbox.com/terms")
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+    
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,12 +28,9 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func close(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func dismiss(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-
-    @IBOutlet weak var signOut: UIButton!
-    
 
     /*
     // MARK: - Navigation
