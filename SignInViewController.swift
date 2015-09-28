@@ -27,7 +27,7 @@ class SignInViewController: UIViewController {
     var initialSignInImgY: CGFloat!
     let offsetText: CGFloat = -70
     let offsetCTA: CGFloat = -220
-
+    let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .Alert)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,6 +118,16 @@ class SignInViewController: UIViewController {
     @IBAction func signIn(sender: AnyObject) {
         if emailText.text == "" {
             print("no email")
+            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            alertController.addAction(cancelAction)
+            // create an OK action
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                // handle response here.
+            }
+            // add the OK action to the alert controller
+            alertController.addAction(OKAction)
         }
         
         if passwordText.text == "" {

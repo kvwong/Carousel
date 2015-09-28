@@ -217,12 +217,7 @@
                                 <animations/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="terms_text" id="4V9-qd-9ju">
-                                <rect key="frame" x="0.0" y="357" width="320" height="33"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_nav" id="bHG-Mt-83K">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                <rect key="frame" x="0.0" y="349" width="320" height="33"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </imageView>
@@ -231,33 +226,33 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full name" textAlignment="natural" minimumFontSize="17" id="ZES-Uk-4zj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" id="ZES-Uk-4zj">
                                 <rect key="frame" x="20" y="175" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="ESe-Wg-KF3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" id="ESe-Wg-KF3">
                                 <rect key="frame" x="20" y="220" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="yPe-T8-Skr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="yPe-T8-Skr">
                                 <rect key="frame" x="20" y="263" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" id="gbr-oW-3jP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="gbr-oW-3jP">
                                 <rect key="frame" x="20" y="310" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_button" id="cMJ-ZI-Byl">
                                 <rect key="frame" x="0.0" y="428" width="320" height="57"/>
@@ -273,17 +268,25 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bDw-Pc-vjf">
-                                <rect key="frame" x="17" y="357" width="30" height="34"/>
+                                <rect key="frame" x="17" y="349" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" image="checkbox_unchecked"/>
-                                <state key="selected" image="checkbox_complete"/>
+                                <state key="normal" image="check_box"/>
+                                <state key="selected" image="check_box_selected"/>
+                                <connections>
+                                    <action selector="checkbox:" destination="U57-LP-LRd" eventType="touchUpInside" id="nKi-YJ-asl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mZe-ys-jkX">
-                                <rect key="frame" x="47" y="359" width="110" height="30"/>
+                                <rect key="frame" x="47" y="351" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_nav" id="bHG-Mt-83K">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WZz-kE-uRo">
                                 <rect key="frame" x="5" y="23" width="38" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -296,10 +299,33 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Qei-qq-UYX" appends="YES" id="U6d-1C-O0t"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Z5F-If-n8b"/>
+                    <connections>
+                        <outlet property="agreeImage" destination="mZe-ys-jkX" id="jpa-jm-QKM"/>
+                        <outlet property="checkbox" destination="bDw-Pc-vjf" id="vbC-yk-0jE"/>
+                        <outlet property="checkboxTerms" destination="bDw-Pc-vjf" id="grR-rU-dov"/>
+                        <outlet property="createButton" destination="nVl-dx-Vbx" id="bY9-84-xGt"/>
+                        <outlet property="createImage" destination="cMJ-ZI-Byl" id="8eR-Ev-rDk"/>
+                        <outlet property="createLines" destination="S57-sK-R20" id="etW-II-7yg"/>
+                        <outlet property="createText" destination="6Lj-KH-jkR" id="vy8-Ju-WpH"/>
+                        <outlet property="emailText" destination="yPe-T8-Skr" id="8B8-Dx-8wt"/>
+                        <outlet property="firstNameText" destination="ZES-Uk-4zj" id="ebD-kb-8hn"/>
+                        <outlet property="lastNameText" destination="ESe-Wg-KF3" id="s7b-u4-lA7"/>
+                        <outlet property="passwordText" destination="gbr-oW-3jP" id="GTt-D4-N5h"/>
+                        <outlet property="termsImage" destination="4V9-qd-9ju" id="jM8-ys-lV7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHF-mg-Juk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Qei-qq-UYX">
+                    <connections>
+                        <action selector="onTap:" destination="U57-LP-LRd" id="n3c-J4-dKd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="540" y="1935"/>
         </scene>
@@ -617,8 +643,8 @@
     </scenes>
     <resources>
         <image name="backup_button" width="320" height="97"/>
-        <image name="checkbox_complete" width="24" height="24"/>
-        <image name="checkbox_unchecked" width="23" height="23"/>
+        <image name="check_box" width="20" height="20"/>
+        <image name="check_box_selected" width="20" height="20"/>
         <image name="conversations" width="320" height="568"/>
         <image name="create_button" width="320" height="57"/>
         <image name="create_form" width="320" height="192"/>
