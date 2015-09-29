@@ -41,15 +41,15 @@ Code Path: Week 2 assignment demonstrating animations and conditional logic in S
 
 **LOGIN**
 
-![](http://)
+![](https://github.com/kvwong/Carousel/blob/master/Carousel%20-%20Sign%20In.gif)
 
 **FEED & VIEWS**
 
-![](http://)
+![](https://github.com/kvwong/Carousel/blob/master/Carousel%20-%20Feed%20Segues.gif)
 
 **CREATE**
 
-![](http://)
+![](https://github.com/kvwong/Carousel/blob/master/Carousel%20-%20Create%20Carousel.gif)
 
 ## Creator
 **Kevin Wong**
