@@ -27,7 +27,7 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
     var initialSignInImgY: CGFloat!
     let offsetText: CGFloat = -70
     let offsetCTA: CGFloat = -220
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,8 +39,17 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         initialLineY = loginLines.frame.origin.y
         initialSignInImgY = ctaImage.frame.origin.y
         
+        loginLines.alpha = 0
+        loginLines.transform = CGAffineTransformScale(loginLines.transform, CGFloat(0.5), CGFloat(0.5))
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+
+        UIView.animateWithDuration(0.6, animations: {
+            self.loginLines.alpha = 1
+            self.loginLines.transform = CGAffineTransformScale(self.loginLines.transform, CGFloat(2.0), CGFloat(2.0))
+            
+        })
         
         // Do any additional setup after loading the view.
     }
@@ -130,7 +139,7 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
     }
     
     func checkPassword() {
-        if passwordText.text == "password" {
+        if passwordText.text == "password" && emailText.text == "tim@thecodepath.com" {
             let successAlert = UIAlertView(title: "Signing in...", message: "",delegate: nil, cancelButtonTitle: nil)
             
             successAlert.show()
@@ -139,10 +148,13 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
                 successAlert.dismissWithClickedButtonIndex(-1, animated: true)
                 self.performSegueWithIdentifier("startWelcome", sender: self)
             }
-        } else {
+        } else if passwordText.text != "password" && emailText.text == "time@thecodepath.com" {
             let passwordAlert = UIAlertView(title: "Incorrect Password", message: "Please try again", delegate: nil, cancelButtonTitle: "Okay")
             
             passwordAlert.show()
+        } else {
+            let warningAlert = UIAlertView(title: "Login Information Required", message: "Please enter correct email and password", delegate: nil, cancelButtonTitle: "Okay")
+            warningAlert.show()
         }
     }
     

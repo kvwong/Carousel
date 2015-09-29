@@ -24,6 +24,7 @@
 		CB99AA471BB5315F00002C71 /* CarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99AA461BB5315F00002C71 /* CarouselUITests.swift */; };
 		CB99AA551BB5333700002C71 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99AA541BB5333700002C71 /* Common.swift */; settings = {ASSET_TAGS = (); }; };
 		CB99AA571BB533A000002C71 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99AA561BB533A000002C71 /* IntroViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CBD7D4A61BBA504500477B1C /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7D4A51BBA504500477B1C /* GetStartedViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		CB99AA481BB5315F00002C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB99AA541BB5333700002C71 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		CB99AA561BB533A000002C71 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		CBD7D4A51BBA504500477B1C /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		CB99AA1A1BB5315F00002C71 = {
 			isa = PBXGroup;
 			children = (
+				CBD7D4A51BBA504500477B1C /* GetStartedViewController.swift */,
 				CB60143C1BB928E000A78D9B /* WebViewController.swift */,
 				CB4EF35E1BB7F9A40041B966 /* SettingsViewController.swift */,
 				CB4EF35A1BB7F7940041B966 /* FeedViewController.swift */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD7D4A61BBA504500477B1C /* GetStartedViewController.swift in Sources */,
 				CB99AA291BB5315F00002C71 /* ViewController.swift in Sources */,
 				CB4EF35D1BB7F79A0041B966 /* ConversationsViewController.swift in Sources */,
 				CB4EF35F1BB7F9A40041B966 /* SettingsViewController.swift in Sources */,
